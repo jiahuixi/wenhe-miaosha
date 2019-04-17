@@ -5,10 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
-@Entity(name="miaosha_user")
+//@Entity(name="miaosha_user")
 public class MiaoshaUser {
-	@Id
-	@GeneratedValue
+//	@Id
+//	@GeneratedValue
 	private Long id;
 	private String nickname;
 	private String password;

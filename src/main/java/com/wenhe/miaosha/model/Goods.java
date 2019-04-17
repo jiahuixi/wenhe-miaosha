@@ -3,10 +3,10 @@ package com.wenhe.miaosha.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-@Entity(name="goods")
+//@Entity(name="goods")
 public class Goods {
-	@Id
-	@GeneratedValue
+//	@Id
+//	@GeneratedValue
 	private Long id;
 	private String goodsName;
 	private String goodsTitle;

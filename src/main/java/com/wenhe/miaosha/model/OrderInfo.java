@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
-@Entity(name="miaosha_order")
+//@Entity(name="miaosha_order")
 public class OrderInfo {
-	@Id
-	@GeneratedValue
+//	@Id
+//	@GeneratedValue
 	private Long id;
 	private Long userId;
 	private Long goodsId;
