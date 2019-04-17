@@ -1,6 +1,7 @@
 package com.wenhe.miaosha.controller;
 
 import com.wenhe.miaosha.model.User;
+import com.wenhe.miaosha.rabbitmq.MQSender;
 import com.wenhe.miaosha.redis.RedisService;
 import com.wenhe.miaosha.redis.UserKey;
 import com.wenhe.miaosha.result.CodeMsg;
@@ -21,6 +22,37 @@ public class SampleController {
 	
 	@Autowired
     RedisService redisService;
+
+	@Autowired
+    MQSender sender;
+	
+//	@RequestMapping("/mq/header")
+//    @ResponseBody
+//    public Result<String> header() {
+//		sender.sendHeader("hello,imooc");
+//        return Result.success("Hello，world");
+//    }
+//	
+//	@RequestMapping("/mq/fanout")
+//    @ResponseBody
+//    public Result<String> fanout() {
+//		sender.sendFanout("hello,imooc");
+//        return Result.success("Hello，world");
+//    }
+//	
+//	@RequestMapping("/mq/topic")
+//    @ResponseBody
+//    public Result<String> topic() {
+//		sender.sendTopic("hello,imooc");
+//        return Result.success("Hello，world");
+//    }
+//	
+//	@RequestMapping("/mq")
+//    @ResponseBody
+//    public Result<String> mq() {
+//		sender.send("hello,imooc");
+//        return Result.success("Hello，world");
+//    }
 	
     @RequestMapping("/hello")
     @ResponseBody

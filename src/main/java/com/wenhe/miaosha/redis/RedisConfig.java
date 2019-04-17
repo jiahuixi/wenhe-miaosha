@@ -4,6 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
+//prefix就是配置文件中的前缀
 @ConfigurationProperties(prefix="redis")
 public class RedisConfig {
 	private String host;

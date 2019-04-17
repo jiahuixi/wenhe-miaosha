@@ -10,10 +10,10 @@ import java.util.List;
 
 @Service
 public class GoodsService {
-	
+
 	@Autowired
 	GoodsDao goodsDao;
-	
+
 	public List<GoodsVo> listGoodsVo(){
 		return goodsDao.listGoodsVo();
 	}
@@ -37,7 +37,7 @@ public class GoodsService {
 			goodsDao.resetStock(g);
 		}
 	}
-	
-	
-	
+
+
+
 }

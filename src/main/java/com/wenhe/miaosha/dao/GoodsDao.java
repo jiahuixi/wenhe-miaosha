@@ -12,7 +12,7 @@ import java.util.List;
 
 @Mapper
 public interface GoodsDao {
-	
+
 	@Select("select g.*,mg.stock_count, mg.start_date, mg.end_date,mg.miaosha_price from miaosha_goods mg left join goods g on mg.goods_id = g.id")
 	public List<GoodsVo> listGoodsVo();
 
@@ -24,5 +24,5 @@ public interface GoodsDao {
 
 	@Update("update miaosha_goods set stock_count = #{stockCount} where goods_id = #{goodsId}")
 	public int resetStock(MiaoshaGoods g);
-	
+
 }
