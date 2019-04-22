@@ -62,8 +62,6 @@ public class GoodsController {
 //    	 return "goods_list";
         IWebContext ctx =new WebContext(request,response,
                 request.getServletContext(),request.getLocale(),model.asMap());
-//        SpringWebContext ctx = new SpringWebContext(request,response,
-//    			request.getServletContext(),request.getLocale(), model.asMap(), applicationContext );
 //    	//手动渲染
     	String html = thymeleafViewResolver.getTemplateEngine().process("goods_list", ctx);
     	if(!StringUtils.isEmpty(html)) {
@@ -109,8 +107,6 @@ public class GoodsController {
 
 		IWebContext ctx = new WebContext(request,response,
 				request.getServletContext(),request.getLocale(), model.asMap());
-//    	SpringWebContext ctx = new SpringWebContext(request,response,
-//    			request.getServletContext(),request.getLocale(), model.asMap(), applicationContext );
     	html = thymeleafViewResolver.getTemplateEngine().process("goods_detail", ctx);
     	if(!StringUtils.isEmpty(html)) {
     		redisService.set(GoodsKey.getGoodsDetail, ""+goodsId, html);

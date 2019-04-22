@@ -3,6 +3,7 @@ package com.wenhe.miaosha.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Calendar;
 import java.util.Date;
 //@Entity(name="miaosha_goods")
 public class MiaoshaGoods {
@@ -42,5 +43,14 @@ public class MiaoshaGoods {
 	}
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
+	}
+	public static void main(String[] args) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.DAY_OF_YEAR, 1);
+		calendar.set(Calendar.HOUR_OF_DAY, 1);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		System.out.println((calendar.getTime().getTime() - System.currentTimeMillis()) / 1000);
 	}
 }
